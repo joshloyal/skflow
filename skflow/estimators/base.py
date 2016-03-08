@@ -27,11 +27,8 @@ import tensorflow as tf
 from google.protobuf import text_format
 
 from sklearn.base import BaseEstimator
-try:
-    from sklearn.exceptions import NotFittedError
-except ImportError:
-    from sklearn.utils.validation import NotFittedError  # pylint: disable=ungrouped-imports
 
+from skflow.exceptions import NotFittedError
 from skflow.trainer import TensorFlowTrainer, RestoredTrainer
 from skflow.io.data_feeder import setup_train_data_feeder
 from skflow.io.data_feeder import setup_predict_data_feeder

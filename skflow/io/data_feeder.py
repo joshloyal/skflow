@@ -23,10 +23,10 @@ import six
 from six.moves import xrange   # pylint: disable=redefined-builtin
 
 import numpy as np
-from sklearn.utils import check_array
 
 from skflow.io import HAS_PANDAS, extract_pandas_data, extract_pandas_matrix, extract_pandas_labels
 from skflow.io import HAS_DASK, extract_dask_data, extract_dask_labels
+from skflow.utils import check_array
 
 
 def _get_in_out_shape(x_shape, y_shape, n_classes, batch_size):
